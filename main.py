@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime
 
-# Check url: https://pixe.la/v1/users/harshith/graphs/graph1.html
+
 USER_NAME = "harshith"
 TOKEN = "l1d2m3c4r5g6r7b8"
 GRAPH_ID = "graph1"
@@ -14,8 +14,7 @@ user_params = {
     "agreeTermsOfService": "yes",
     "notMinor": "yes"
 }
-# response = requests.post(url=pixela_endpoint, json=user_params)
-# print(response.text)
+
 graph_endpoint = f"{pixela_endpoint}/{USER_NAME}/graphs"
 
 graph_params = {
@@ -29,8 +28,7 @@ graph_params = {
 header = {
     "X-USER-TOKEN": TOKEN
 }
-# graph_response = requests.post(url=graph_endpoint, json=graph_params, headers=header)
-# print(graph_response.text)
+
 inp = input("Add today's work?Y/N ").upper()
 if inp == "Y":
     data = int(input("What is the activity time?: "))*60
